@@ -1,0 +1,5 @@
+node_modules/
+diet-db-data/
+.env
+history.txt
+pnpm-lock.yaml
