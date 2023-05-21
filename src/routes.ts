@@ -2,8 +2,14 @@ import { Router } from "express";
 import db from "./utils/surreal_db";
 import { Result } from "surrealdb.js";
 import * as dayController from "./controllers/dayController";
+import * as foodController from "./controllers/foodController";
 
 const router = Router();
+
+router.get("/food", async (req, res) => {
+    const foods = await foodController.listFoods();
+    res.send(foods);
+});
 
 router.get("/day/:id", async (req, res) => {
     const days = await dayController.getDay(req.params.id);

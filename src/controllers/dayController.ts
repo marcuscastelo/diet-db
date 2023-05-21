@@ -3,6 +3,7 @@ import db from "../utils/surreal_db";
 import { Day } from "../model/dayModel";
 import { dayId } from "../utils/date";
 import { Meal } from "../model/mealModel";
+import { getFirst, unwrap } from "../utils/result";
 
 const defaultMeals: Meal[] = [
     {
@@ -26,14 +27,6 @@ const defaultMeals: Meal[] = [
         items: []
     },
 ];
-
-const getFirst = <T>(arr: T[]) => arr[0]
-const unwrap = <T>(res: Result<T>) => {
-    if (res.result) 
-        return res.result;
-    else 
-        throw res.error ?? "Unknown error";
-}
 
 export const listDays = async () =>
     await db.query<Result<Day[]>[]>(
