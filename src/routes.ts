@@ -11,6 +11,21 @@ router.get("/food", async (req, res) => {
     res.send(foods);
 });
 
+router.get("/food/search", async (req, res) => {
+    if (!req.query.q) {
+        res.status(400).send("400");
+        return;
+    }
+    const foods = await foodController.searchFoods(req.query.q as string);
+    res.send(foods);
+});
+
+router.get("/food/:id", async (req, res) => {
+    const foods = await foodController.getFood(req.params.id);
+    res.send(foods);
+});
+
+
 router.get("/day/:id", async (req, res) => {
     const days = await dayController.getDay(req.params.id);
     if (days) res.send(days);

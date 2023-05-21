@@ -1552,7 +1552,6 @@ UPDATE food:C0150A CONTENT { id: food:C0150A, name: 'Pão, trigo, fonte de fibra
 UPDATE food:C0150B CONTENT { id: food:C0150B, name: 'Brócolis, flor, cozido, drenado, s/ óleo, c/ sal' };
 UPDATE food:C0150E CONTENT { id: food:C0150E, name: 'Peixe, água salgada, corvina do mar, frito (c/ óleo de soja), c/ sal' };
 UPDATE food:C0150F CONTENT { id: food:C0150F, name: 'Carne, ovino, capão, paleta, crua' };
-UPDATE food:C0150G CONTENT { id: food:C0150G };
 UPDATE food:C0150H CONTENT { id: food:C0150H, name: 'Quentão de vinho' };
 UPDATE food:C0150K CONTENT { id: food:C0150K, name: 'Cheese cake, massa' };
 UPDATE food:C0150N CONTENT { id: food:C0150N, name: 'Papa de peito de frango, batata e cenoura, c/ caldo de frango, c/ cebola, s/ óleo, c/ sal' };
