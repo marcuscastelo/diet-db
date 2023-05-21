@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start-ts": "ts-node index.ts",
-    "dev-ts": "ts-node-dev index.ts",
+    "start-ts": "ts-node src/index.ts",
+    "dev-ts": "ts-node-dev src/index.ts",
     "start": "concurrently --kill-others \"npm run start-ts\" \"./surreal_start.sh\"",
     "dev": "concurrently --kill-others \"npm run dev-ts\" \"./surreal_start.sh\"",
     "init": "tsc --init"

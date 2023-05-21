@@ -17,12 +17,6 @@ DEFINE TABLE day SCHEMALESS PERMISSIONS NONE;
 DEFINE TABLE food SCHEMALESS PERMISSIONS NONE;
 
 -- ------------------------------
--- TABLE: in_meal
--- ------------------------------
-
-DEFINE TABLE in_meal SCHEMALESS PERMISSIONS NONE;
-
--- ------------------------------
 -- TABLE: meal
 -- ------------------------------
 
@@ -44,20 +38,13 @@ BEGIN TRANSACTION;
 -- TABLE DATA: day
 -- ------------------------------
 
-UPDATE day:⟨20230521⟩ CONTENT { creationDate: '2023-05-21', id: day:⟨20230521⟩, meals: [{ id: 'breakfast', items: [], name: 'Breakfast' }, { id: 'lunch', items: [], name: 'Lunch' }, { id: 'snack', items: [], name: 'Snack' }, { id: 'dinner', items: [], name: 'Dinner' }] };
+UPDATE day:today CONTENT { id: day:20230520 };
 
 -- ------------------------------
 -- TABLE DATA: food
 -- ------------------------------
 
 UPDATE food:frango CONTENT { id: food:frango };
-
--- ------------------------------
--- TABLE DATA: in_meal
--- ------------------------------
-
-RELATE mealitem:teste -> in_meal:8qsfnl7tz5zn82nxr0qp -> meal:breakfast CONTENT { __: true, id: in_meal:8qsfnl7tz5zn82nxr0qp, in: mealitem:teste, out: meal:breakfast };
-RELATE mealitem:teste -> in_meal:bzoma02h5qfxkpqoj017 -> meal:breakfast CONTENT { __: true, id: in_meal:bzoma02h5qfxkpqoj017, in: mealitem:teste, out: meal:breakfast };
 
 -- ------------------------------
 -- TABLE DATA: meal
@@ -73,6 +60,7 @@ UPDATE meal:snack CONTENT { id: meal:snack };
 -- ------------------------------
 
 UPDATE mealitem:teste CONTENT { id: mealitem:teste };
+
 
 -- ------------------------------
 -- TRANSACTION
